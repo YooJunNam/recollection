@@ -3,8 +3,16 @@
 }
 
 body {
-  background-color: black;
+  background-color: ;
+  overflow: ;
 }
 * {
-  overflow: hidden;
+}
+
+.ant-picker-calendar {
+  background-color: black !important;
+}
+
+.ant-picker-calendar .ant-picker-panel {
+  background-color: black !important;
 }
