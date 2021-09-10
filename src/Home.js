@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import HomeHeader from "./Header/HomeHeader";
+import ContentsHistories from "./ContentsHistories";
 import moment from "moment";
-import calendar from "./png/calendar.png";
-import map from "./png/map.png";
-import user from "./png/usericon.png";
 import confirm from "./png/confirm.png";
 import landscape from "./png/landscape.png";
 import place from "./png/place.png";
@@ -30,18 +29,7 @@ function Home() {
   };
   return (
     <div className="Home">
-      <HomeHeaderContainer>
-        <HomeHeaderItemLeft>
-          <IconPaddingImg src={user} style={{}}></IconPaddingImg>
-        </HomeHeaderItemLeft>
-        <HomeHeaderItemMiddle>
-          <HomeHeaderMiddleContent>Recollection</HomeHeaderMiddleContent>
-        </HomeHeaderItemMiddle>
-        <HomeHeaderItemRight>
-          <IconPaddingImg src={map}></IconPaddingImg>
-          <IconPaddingImg src={calendar}></IconPaddingImg>
-        </HomeHeaderItemRight>
-      </HomeHeaderContainer>
+      <HomeHeader />
       <DiaryCotainer>
         <DiaryContent>
           <DiaryTextArea placeholder="오늘의 기억을 적어주세요"></DiaryTextArea>
@@ -87,68 +75,12 @@ function Home() {
           <span>{moment().format("YYYY.MM.DD")}</span>
         </Date>
       </DiaryOptionBox>
-
-      <ContentWithDateDiv>
-        <span
-          style={{
-            fontSize: "12px",
-            color: "white",
-            fontWeight: "800",
-            marginLeft: "20px",
-          }}
-        >
-          2021.09.02
-        </span>
-
-        <ContentWithDate>
-          <div style={{ backgroundColor: "#121212" }}>
-            <span style={{ backgroundColor: "#121212", color: "white" }}>
-              content
-            </span>
-          </div>
-          <ContentHistory>
-            <span>2021.09.02</span>
-            <img
-              src={place}
-              style={{ width: "8px", height: "8px", marginLeft: "10px" }}
-            ></img>
-            <span>동백호수공원</span>
-          </ContentHistory>
-        </ContentWithDate>
-      </ContentWithDateDiv>
+      <ContentsHistories />
     </div>
   );
 }
 
 export default Home;
-
-const HomeHeaderContainer = styled.div`
-  height: 4rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #121212;
-  color: white;
-`;
-
-const HomeHeaderItemLeft = styled.div`
-  padding-left: 5px;
-`;
-const HomeHeaderItemRight = styled.div``;
-
-const HomeHeaderItemMiddle = styled.div`
-  padding-left: 1.6rem;
-  padding-bottom: 0.3rem;
-  font-weight: 600;
-  font-size: 24px;
-`;
-const HomeHeaderMiddleContent = styled.span`
-  text-align: center;
-  align-items: center;
-  background-color: #121212;
-`;
 
 const IconPaddingImg = styled.img`
   width: 20px;
@@ -210,23 +142,4 @@ const Date = styled.div`
   text-align: center;
   align-items: center;
   color: white;
-`;
-
-const ContentWithDateDiv = styled.div`
-  margin-top: 20px;
-  overflow: scroll;
-  height: 560px;
-`;
-
-const ContentWithDate = styled.div`
-  border-radius: 7px;
-  background-color: #121212;
-  margin: 12px;
-  padding: 10px;
-`;
-
-const ContentHistory = styled.div`
-  font-size: 6px;
-  color: #8e8e92;
-  background-color: #121212;
 `;
