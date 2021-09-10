@@ -12,7 +12,7 @@ function CalendarHeader({ changeModeProps, history }) {
       <CalendarHeaderItemLeft>
         <IconPaddingImg
           src={arrow}
-          style={{ width: "30px" }}
+          style={{ width: "30px", height: "30px" }}
           onClick={() => {
             history.goBack();
           }}
@@ -24,11 +24,14 @@ function CalendarHeader({ changeModeProps, history }) {
       <HomeHeaderItemRight>
         <IconPaddingImg
           onClick={changeModeProps}
-          style={{ width: "30px" }}
+          style={{ width: "30px", height: "30px" }}
           src={calendar}
         ></IconPaddingImg>
 
-        <IconPaddingImg src={pencil} style={{ width: "30px" }}></IconPaddingImg>
+        <IconPaddingImg
+          src={pencil}
+          style={{ width: "30px", height: "30px" }}
+        ></IconPaddingImg>
       </HomeHeaderItemRight>
     </CalendarHeaderContainer>
   );

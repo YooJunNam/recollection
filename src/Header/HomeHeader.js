@@ -9,17 +9,26 @@ function HomeHeader() {
   return (
     <HomeHeaderContainer>
       <HomeHeaderItemLeft>
-        <IconPaddingImg src={user} style={{}}></IconPaddingImg>
+        <IconPaddingImg
+          src={user}
+          style={{ width: "30px", height: "30px" }}
+        ></IconPaddingImg>
       </HomeHeaderItemLeft>
       <HomeHeaderItemMiddle>
         <HomeHeaderMiddleContent>Recollection</HomeHeaderMiddleContent>
       </HomeHeaderItemMiddle>
       <HomeHeaderItemRight>
         <Link to="/Map">
-          <IconPaddingImg src={map}></IconPaddingImg>
+          <IconPaddingImg
+            src={map}
+            style={{ width: "30px", height: "30px" }}
+          ></IconPaddingImg>
         </Link>
         <Link to="/Calendar">
-          <IconPaddingImg src={calendar}></IconPaddingImg>
+          <IconPaddingImg
+            src={calendar}
+            style={{ width: "30px", height: "30px" }}
+          ></IconPaddingImg>
         </Link>
       </HomeHeaderItemRight>
     </HomeHeaderContainer>

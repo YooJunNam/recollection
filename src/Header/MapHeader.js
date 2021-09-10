@@ -12,6 +12,7 @@ function MapHeader({ history }) {
       <MapHeaderItemLeft>
         <IconPaddingImg
           src={arrow}
+          style={{ width: "30px", height: "30px" }}
           onClick={() => {
             history.goBack();
           }}
@@ -22,10 +23,16 @@ function MapHeader({ history }) {
       </MapHeaderItemMiddle>
       <HomeHeaderItemRight>
         <Link to="/Location">
-          <IconPaddingImg src={calendar}></IconPaddingImg>
+          <IconPaddingImg
+            src={calendar}
+            style={{ width: "30px", height: "30px" }}
+          ></IconPaddingImg>
         </Link>
 
-        <IconPaddingImg src={pencil}></IconPaddingImg>
+        <IconPaddingImg
+          src={pencil}
+          style={{ width: "30px", height: "30px" }}
+        ></IconPaddingImg>
       </HomeHeaderItemRight>
     </MapHeaderContainer>
   );

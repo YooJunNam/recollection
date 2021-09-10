@@ -66,7 +66,6 @@ const CalendarView = ({
           </Button>
 
           <div
-            className="site-calendar-customize-header-wrapper"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
